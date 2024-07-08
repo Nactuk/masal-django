@@ -1,0 +1,124 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Masal Dünyası</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Navbar */
+        .navbar {
+            height: 80px;
+            background-color: #343a40; /* Navbar arkaplan rengi */
+        }
+
+        .navbar-brand {
+            font-size: 2em;
+            color: #ffffff; /* Navbar metin rengi */
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff; /* Navbar link metin rengi */
+            margin-right: 20px; /* Linkler arası boşluk */
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #17a2b8; /* Link üzerine gelindiğinde metin rengi */
+            }
+
+        /* Başlık */
+        .jumbotron {
+            background-color: #f8f9fa; /* Başlık arkaplan rengi */
+            color: #343a40; /* Başlık metin rengi */
+        }
+
+        /* İçerik kartları */
+        .card {
+            border: none; /* Kart sınırı kaldır */
+        }
+
+        .card-title {
+            color: #343a40; /* Kart başlık metin rengi */
+        }
+
+        .card-text {
+            color: #6c757d; /* Kart metin rengi */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40; /* Footer arkaplan rengi */
+            color: #ffffff; /* Footer metin rengi */
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home'%}">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'masallar'%}">Masallar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Başlık -->
+    <div class="jumbotron text-center">
+        <h1 class="display-2"><strong>Masal Dünyası</strong></h1>
+        <p class="lead">Hayal gücünün sınırlarını zorla!</p>
+    </div>
+
+    <!-- İçerik -->
+    <div class="container">
+        <h3 class="text-center">Popüler masallar</h3>
+        <div class="row">
+            {% if masallar %}
+            {% for masal in masallar %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="masal1.jpg" class="card-img-top" alt="Masal {{masal.id}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{masal.name}}</h5>
+                        <p class="card-text">{{masal.content}}</p>
+                    </div>
+                    <small class="text-body-secondary">{{ masal.date | naturaltime }}</small>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-warning">
+            <p>
+                no masal
+            </p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3">
+        &copy; 2023 Masal Dünyası
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

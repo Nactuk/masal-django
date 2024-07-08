@@ -1,0 +1,78 @@
+/* Yeni Tema Stilleri */
+body {
+    font-family: Arial, sans-serif; /* Yeni font seçimi */
+}
+
+.navbar {
+    background-color: #007bff; /* Yeni navbar arkaplan rengi */
+}
+
+.navbar-brand {
+    color: #ffffff; /* Yeni navbar metin rengi */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff; /* Yeni navbar link metin rengi */
+}
+
+    .navbar-nav .nav-link:hover {
+        color: #17a2b8; /* Yeni link üzerine gelindiðinde metin rengi */
+    }
+
+.jumbotron {
+    background-color: #f8f9fa; /* Yeni baþlýk arkaplan rengi */
+    color: #343a40; /* Yeni baþlýk metin rengi */
+}
+
+.card-title {
+    color: #343a40; /* Yeni kart baþlýk metin rengi */
+}
+
+.card-text {
+    color: #6c757d; /* Yeni kart metin rengi */
+}
+/* Karanlýk Tema Stilleri */
+.dark-theme {
+    background-color: #343a40; /* Yeni arkaplan rengi */
+    color: #ffffff; /* Yeni metin rengi */
+}
+
+    .dark-theme .navbar {
+        background-color: #343a40; /* Navbar arkaplan rengi karanlýk temada */
+    }
+
+    .dark-theme .navbar-brand {
+        color: #ffffff; /* Navbar metin rengi karanlýk temada */
+    }
+
+    .dark-theme .navbar-nav .nav-link {
+        color: #ffffff; /* Navbar link metin rengi karanlýk temada */
+    }
+
+        .dark-theme .navbar-nav .nav-link:hover {
+            color: #17a2b8; /* Link üzerine gelindiðinde metin rengi karanlýk temada */
+        }
+
+    .dark-theme .jumbotron {
+        background-color: #343a40; /* Baþlýk arkaplan rengi karanlýk temada */
+        color: #ffffff; /* Baþlýk metin rengi karanlýk temada */
+    }
+
+    .dark-theme .card-title {
+        color: #ffffff; /* Kart baþlýk metin rengi karanlýk temada */
+    }
+
+    .dark-theme .card-text {
+        color: #cccccc; /* Kart metin rengi karanlýk temada */
+    }
+
+    .dark-theme footer {
+        background-color: #343a40; /* Footer arkaplan rengi karanlýk temada */
+        color: #ffffff; /* Footer metin rengi karanlýk temada */
+    }
+
+
+footer {
+    background-color: #343a40; /* Yeni footer arkaplan rengi */
+    color: #ffffff; /* Yeni footer metin rengi */
+}
